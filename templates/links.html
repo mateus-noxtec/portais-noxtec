@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ cliente }} - Painel de Portais</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #5349B1 0%, #7c6fd8 100%);
+            min-height: 100vh;
+        }
+
+        header {
+            padding: 2rem;
+            text-align: center;
+            color: white;
+        }
+
+        h1 {
+            font-weight: 700;
+            font-size: 2rem;
+        }
+
+        .back-link {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin-top: 0.5rem;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 2rem 4rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .category-section {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .category-header {
+            padding: 1rem 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: white;
+        }
+
+        .category-header .cat-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.25);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .category-header .cat-count {
+            margin-left: auto;
+            background: rgba(255, 255, 255, 0.25);
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .cat-prd .category-header {
+            background: linear-gradient(135deg, #38a169, #48bb78);
+        }
+
+        .cat-tre .category-header {
+            background: linear-gradient(135deg, #dd6b20, #ed8936);
+        }
+
+        .cat-ext .category-header {
+            background: linear-gradient(135deg, #d69e2e, #ecc94b);
+        }
+
+        .cat-bi .category-header {
+            background: linear-gradient(135deg, #805ad5, #9f7aea);
+        }
+
+        .cat-int .category-header {
+            background: linear-gradient(135deg, #3182ce, #4299e1);
+        }
+
+        .category-body {
+            padding: 0.8rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 0.8rem;
+        }
+
+        .link-card {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem 1.2rem;
+            background: #f8fafc;
+            border-radius: 12px;
+            text-decoration: none;
+            color: #2d3748;
+            transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+            border: 1px solid #e2e8f0;
+        }
+
+        .link-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            background: white;
+        }
+
+        .link-icon {
+            width: 42px;
+            height: 42px;
+            border-radius: 10px;
+            object-fit: contain;
+            flex-shrink: 0;
+        }
+
+        .cat-prd .link-icon,
+        .cat-tre .link-icon,
+        .cat-ext .link-icon,
+        .cat-bi .link-icon,
+        .cat-int .link-icon {
+            background: transparent;
+        }
+
+        .link-info {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .link-name {
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: #2d3748;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .link-url-text {
+            font-size: 0.75rem;
+            color: #a0aec0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin-top: 0.15rem;
+        }
+
+        .link-arrow {
+            color: #cbd5e1;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+            transition: color 0.2s;
+        }
+
+        .link-card:hover .link-arrow {
+            color: #5349B1;
+        }
+
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        .top-bar a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            padding: 0.4rem 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 20px;
+            transition: background 0.3s;
+        }
+
+        .top-bar a:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .btn-edit-sm {
+            padding: 0.2rem 0.6rem;
+            background: #5349B1;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+            flex-shrink: 0;
+        }
+
+        .btn-edit-sm:hover {
+            background: #4338a0;
+        }
+
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        .modal {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            width: 90%;
+            max-width: 500px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .modal h2 {
+            color: #2d3748;
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #e2e8f0;
+        }
+
+        .modal .form-group {
+            margin-bottom: 1.2rem;
+        }
+
+        .modal label {
+            display: block;
+            font-weight: 500;
+            color: #4a5568;
+            margin-bottom: 0.4rem;
+            font-size: 0.9rem;
+        }
+
+        .modal input,
+        .modal select {
+            width: 100%;
+            padding: 0.7rem 1rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 10px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 0.9rem;
+            transition: border-color 0.3s;
+        }
+
+        .modal input:focus,
+        .modal select:focus {
+            outline: none;
+            border-color: #5349B1;
+        }
+
+        .modal-actions {
+            display: flex;
+            gap: 0.8rem;
+            justify-content: flex-end;
+            margin-top: 1.5rem;
+        }
+
+        .btn-cancel {
+            padding: 0.7rem 1.5rem;
+            background: #e2e8f0;
+            color: #4a5568;
+            border: none;
+            border-radius: 10px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .btn-cancel:hover {
+            background: #cbd5e1;
+        }
+
+        .btn-save {
+            padding: 0.7rem 1.5rem;
+            background: #5349B1;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .btn-save:hover {
+            background: #4338a0;
+        }
+
+        @media (max-width: 600px) {
+            .category-body {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top-bar">
+        <img src="/static/noxtec-logo-branca.png" alt="NoxTec" style="height:36px;">
+        <div>
+            {% if session.get('role') == 'admin' %}
+            <a href="{{ url_for('admin') }}">Admin</a>
+            {% endif %}
+            <a href="{{ url_for('register') }}">+ Cadastro</a>
+            <a href="{{ url_for('logout') }}">Sair</a>
+        </div>
+    </div>
+    <header>
+        <h1>{{ cliente }}</h1>
+        <a href="{{ url_for('clients', estado=estado) }}" class="back-link">&larr; Voltar para clientes</a>
+    </header>
+    <div class="container">
+        {% set badge_order = ['PRD', 'TRE', 'EXT', 'BI', 'INT'] %}
+        {% set badge_labels = {'PRD': 'Produção', 'TRE': 'Treinamento', 'EXT': 'Externo', 'BI': 'Business Intelligence',
+        'INT': 'Interno'} %}
+        {% set badge_icons = {'PRD': '/static/prd.png', 'TRE': '/static/tre.png', 'EXT': '/static/ext.png', 'BI':
+        '/static/bi.png', 'INT': '/static/int.png'} %}
+        {% for badge in badge_order %}
+        {% set ns = namespace(found=false, idx=0) %}
+        {% for link in links %}
+        {% if link.badge == badge %}
+        {% set ns.found = true %}
+        {% endif %}
+        {% endfor %}
+        {% if ns.found %}
+        <div class="category-section cat-{{ badge.lower() }}">
+            <div class="category-header">
+                <div class="cat-icon">{{ badge }}</div>
+                <span>{{ badge_labels.get(badge, badge) }}</span>
+                <span class="cat-count">{{ links | selectattr('badge', 'equalto', badge) | list | length }}</span>
+            </div>
+            <div class="category-body">
+                {% for link in links %}
+                {% if link.badge == badge %}
+                <a href="{{ link.url }}" target="_blank" class="link-card">
+                    <div class="link-info">
+                        <div class="link-name">{{ link.name }}</div>
+                        <div class="link-url-text">{{ link.url }}</div>
+                    </div>
+                    {% if session.get('role') == 'admin' %}
+                    <button class="btn-edit-sm"
+                        onclick="event.preventDefault();event.stopPropagation();openEditLink({{ loop.index0 }}, '{{ link.name | e }}', '{{ link.url | e }}', '{{ link.badge }}')">Editar</button>
+                    {% endif %}
+                    <span class="link-arrow">&#8250;</span>
+                </a>
+                {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+
+    <div class="modal-overlay" id="modalLink">
+        <div class="modal">
+            <h2>Editar Link</h2>
+            <form method="POST" action="{{ url_for('edit_link') }}">
+                <input type="hidden" name="estado" value="{{ estado }}">
+                <input type="hidden" name="cliente" value="{{ cliente }}">
+                <input type="hidden" name="link_id" id="link_id">
+                <div class="form-group">
+                    <label>Nome do Portal</label>
+                    <input type="text" name="nome" id="link_nome" required>
+                </div>
+                <div class="form-group">
+                    <label>URL</label>
+                    <input type="url" name="url" id="link_url" required>
+                </div>
+                <div class="form-group">
+                    <label>Badge (tipo)</label>
+                    <select name="badge" id="link_badge">
+                        <option value="PRD">PRD - Produção</option>
+                        <option value="TRE">TRE - Treinamento</option>
+                        <option value="INT">INT - Interno</option>
+                        <option value="EXT">EXT - Externo</option>
+                        <option value="BI">BI - Business Intelligence</option>
+                    </select>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn-cancel" onclick="closeModal()">Cancelar</button>
+                    <button type="submit" class="btn-save">Salvar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function openEditLink(linkId, nome, url, badge) {
+            document.getElementById('link_id').value = linkId;
+            document.getElementById('link_nome').value = nome;
+            document.getElementById('link_url').value = url;
+            document.getElementById('link_badge').value = badge;
+            document.getElementById('modalLink').classList.add('active');
+        }
+        function closeModal() {
+            document.getElementById('modalLink').classList.remove('active');
+        }
+        document.getElementById('modalLink').addEventListener('click', function (e) {
+            if (e.target === this) closeModal();
+        });
+    </script>
+</body>
+
+</html>
