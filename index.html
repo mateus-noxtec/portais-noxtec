@@ -169,6 +169,15 @@
             background: rgba(255, 255, 255, 0.15);
         }
 
+        .top-bar .logo-link {
+            border: none;
+            border-radius: 0;
+            padding: 0;
+        }
+        .top-bar .logo-link:hover {
+            background: none;
+        }
+
         header {
             padding: 2rem;
             text-align: center;
@@ -818,7 +827,7 @@
     <!-- ESTADOS -->
     <div id="page-estados" class="page">
         <div class="top-bar">
-            <img src="static/noxtec-logo-branca.png" alt="NoxTec" style="height:36px;">
+            <a href="#" onclick="navigate('estados');return false;" class="logo-link"><img src="static/noxtec-logo-branca.png" alt="NoxTec" style="height:36px;"></a>
             <div id="topbar-estados"></div>
         </div>
         <header>
@@ -830,7 +839,7 @@
     <!-- CLIENTES -->
     <div id="page-clientes" class="page">
         <div class="top-bar">
-            <img src="static/noxtec-logo-branca.png" alt="NoxTec" style="height:36px;">
+            <a href="#" onclick="navigate('estados');return false;" class="logo-link"><img src="static/noxtec-logo-branca.png" alt="NoxTec" style="height:36px;"></a>
             <div id="topbar-clientes"></div>
         </div>
         <header>
@@ -846,7 +855,7 @@
     <!-- LINKS -->
     <div id="page-links" class="page">
         <div class="top-bar">
-            <img src="static/noxtec-logo-branca.png" alt="NoxTec" style="height:36px;">
+            <a href="#" onclick="navigate('estados');return false;" class="logo-link"><img src="static/noxtec-logo-branca.png" alt="NoxTec" style="height:36px;"></a>
             <div id="topbar-links"></div>
         </div>
         <header>
@@ -859,7 +868,7 @@
     <!-- CADASTRO -->
     <div id="page-cadastro" class="page">
         <div class="top-bar">
-            <img src="static/noxtec-logo-branca.png" alt="NoxTec" style="height:36px;">
+            <a href="#" onclick="navigate('estados');return false;" class="logo-link"><img src="static/noxtec-logo-branca.png" alt="NoxTec" style="height:36px;"></a>
             <div id="topbar-cadastro"></div>
         </div>
         <header>
@@ -948,7 +957,7 @@
     <!-- ADMIN -->
     <div id="page-admin" class="page">
         <div class="top-bar">
-            <img src="static/noxtec-logo-branca.png" alt="NoxTec" style="height:36px;">
+            <a href="#" onclick="navigate('estados');return false;" class="logo-link"><img src="static/noxtec-logo-branca.png" alt="NoxTec" style="height:36px;"></a>
             <div id="topbar-admin"></div>
         </div>
         <header>
@@ -1037,9 +1046,16 @@
     </div>
 
     <script>
-        var APP_DATA = { "Pernambuco": { "flag": "static/bandeira-pe.webp", "clients": { "AFPES": { "logo": "static/afpes-logo.png", "links": [{ "name": "Noxcare PRD", "url": "https://afpes-prd.nox.app.br/#/", "badge": "PRD" }, { "name": "IS - Portal PRD", "url": "https://afpes-prd.nox.app.br/portal-ui/#/login", "badge": "PRD" }, { "name": "Notification PRD", "url": "https://afpes-prd.nox.app.br/auth-api/login", "badge": "PRD" }, { "name": "Noxcare TRE", "url": "https://afpes-tre.nox.app.br/#/", "badge": "TRE" }, { "name": "IS - Portal TRE", "url": "https://afpes-tre.nox.app.br/portal-ui/#/login", "badge": "TRE" }, { "name": "Notification TRE", "url": "https://afpes-tre.nox.app.br/auth-api/login", "badge": "TRE" }] }, "Rede Virtude": { "logo": "static/rvt-logo.png", "links": [{ "name": "Noxcare PRD", "url": "https://rvt-prd.nox.app.br/#/", "badge": "PRD" }, { "name": "IS4 PRD", "url": "https://is4.redeis.com.br/rvt-prd/", "badge": "PRD" }, { "name": "Noxcare - Portal PRD", "url": "https://rvt-prd.nox.app.br/portal-ui/#/login", "badge": "PRD" }, { "name": "Notification PRD", "url": "https://rvt-prd.nox.app.br/auth-api/login", "badge": "PRD" }, { "name": "Noxcare TRE", "url": "https://rvt-tre.nox.app.br/#/", "badge": "TRE" }, { "name": "IS4 TRE", "url": "https://is4.redeis.com.br/rvt-tre/", "badge": "TRE" }, { "name": "Noxcare - Portal TRE", "url": "https://rvt-tre.nox.app.br/portal-ui/#/login", "badge": "TRE" }, { "name": "Notification TRE", "url": "https://rvt-tre.nox.app.br/auth-api/login", "badge": "TRE" }] }, "Cisne": { "logo": "static/cisne-logo.png", "links": [{ "name": "Noxcare PRD", "url": "https://cisne-prd.nox.app.br/#/", "badge": "PRD" }, { "name": "IS - Portal PRD", "url": "https://cisne-prd.nox.app.br/portal-ui/#/login", "badge": "PRD" }, { "name": "Notification PRD", "url": "https://cisne-prd.nox.app.br/auth-api/login", "badge": "PRD" }, { "name": "IS4 PRD", "url": "http://is4.redeis.com.br:8888/cisne-prd/logon.jsp?sys=SIH&action=logout&back=true", "badge": "PRD" }, { "name": "Noxcare TRE", "url": "https://cisne-tre.nox.app.br/#/", "badge": "TRE" }, { "name": "IS - Portal TRE", "url": "https://cisne-tre.nox.app.br/portal-ui/#/login", "badge": "TRE" }, { "name": "Notification TRE", "url": "https://cisne-tre.nox.app.br/auth-api/login", "badge": "TRE" }] }, "Santa Maria": { "logo": "static/hsm-logo.png", "links": [{ "name": "Noxcare PRD", "url": "https://hsm-prd.nox.app.br/#/", "badge": "PRD" }, { "name": "IS - Portal PRD", "url": "https://hsm-prd.nox.app.br/portal-ui/#/login", "badge": "PRD" }, { "name": "IS4 PRD", "url": "https://is4.redeis.com.br/hsm-prd/", "badge": "PRD" }, { "name": "Notification PRD", "url": "https://hsm-prd.nox.app.br/auth-api/login", "badge": "PRD" }, { "name": "Noxcare TRE", "url": "https://hsm-tre.nox.app.br/#/", "badge": "TRE" }, { "name": "IS - Portal TRE", "url": "https://hsm-tre.nox.app.br/portal-ui/#/login", "badge": "TRE" }, { "name": "IS4 TRE", "url": "https://is4.redeis.com.br/hsm-tre/", "badge": "TRE" }, { "name": "Notification TRE", "url": "https://hsm-tre.nox.app.br/auth-api/login", "badge": "TRE" }, { "name": "Sharepoint / Docs", "url": "https://noxtecservicos.sharepoint.com/sites/DiretoriadeTecnologia/Documentos%20Compartilhados/Forms/AllItems.aspx", "badge": "INT" }] } } }, "Rio de Janeiro": { "flag": "static/bandeira-rj.png", "clients": { "Nova Friburgo": { "logo": "static/nfb-logo.png", "links": [{ "name": "Noxcare NFB PRD", "url": "https://nfb-prd.nox.app.br/#/", "badge": "PRD" }, { "name": "Regulação NFB PRD", "url": "https://nfb-prd.nox.app.br/regulation-ui/login/select-user-health-unit", "badge": "PRD" }, { "name": "IS4 PRD", "url": "http://is4.redeis.com.br:8888/nfb/", "badge": "PRD" }, { "name": "Noxcare TRE", "url": "https://nfb-tre.nox.app.br/#/", "badge": "TRE" }, { "name": "Regulação TRE", "url": "https://nfb-tre.nox.app.br/regulation-ui/regulation/waiting-list", "badge": "TRE" }, { "name": "IS4 TRE", "url": "http://is4.redeis.com.br:8888/nfb-tre/", "badge": "TRE" }, { "name": "PEC", "url": "https://esusab.pmnf.rj.gov.br:8080/", "badge": "EXT" }, { "name": "BI Regulação", "url": "https://app.powerbi.com/view?r=eyJrIjoiNGQ2OTg0ZjYtNDg5OC00OTk3LThhMDMtMDMyNzA0YTM0OGVhIiwidCI6ImYyYmM4YzM3LWFmYjgtNDE1Ny1hNGFmLWRlYTAxNjQ3OGU1ZSJ9", "badge": "BI" }, { "name": "IS-Indicadores", "url": "https://nfb.redeis.com.br/nfb-ui-is/IS-indicadores/#/", "badge": "BI" }, { "name": "NOXTEC - Login", "url": "https://noxcare.saladegestao.com.br/gestao/login", "badge": "INT" }] } } } };
+        var defaultAPP_DATA = { "Pernambuco": { "flag": "static/bandeira-pe.webp", "clients": { "AFPES": { "logo": "static/afpes-logo.png", "links": [{ "name": "Noxcare PRD", "url": "https://afpes-prd.nox.app.br/#/", "badge": "PRD" }, { "name": "IS - Portal PRD", "url": "https://afpes-prd.nox.app.br/portal-ui/#/login", "badge": "PRD" }, { "name": "Notification PRD", "url": "https://afpes-prd.nox.app.br/auth-api/login", "badge": "PRD" }, { "name": "Noxcare TRE", "url": "https://afpes-tre.nox.app.br/#/", "badge": "TRE" }, { "name": "IS - Portal TRE", "url": "https://afpes-tre.nox.app.br/portal-ui/#/login", "badge": "TRE" }, { "name": "Notification TRE", "url": "https://afpes-tre.nox.app.br/auth-api/login", "badge": "TRE" }] }, "Rede Virtude": { "logo": "static/rvt-logo.png", "links": [{ "name": "Noxcare PRD", "url": "https://rvt-prd.nox.app.br/#/", "badge": "PRD" }, { "name": "IS4 PRD", "url": "https://is4.redeis.com.br/rvt-prd/", "badge": "PRD" }, { "name": "Noxcare - Portal PRD", "url": "https://rvt-prd.nox.app.br/portal-ui/#/login", "badge": "PRD" }, { "name": "Notification PRD", "url": "https://rvt-prd.nox.app.br/auth-api/login", "badge": "PRD" }, { "name": "Noxcare TRE", "url": "https://rvt-tre.nox.app.br/#/", "badge": "TRE" }, { "name": "IS4 TRE", "url": "https://is4.redeis.com.br/rvt-tre/", "badge": "TRE" }, { "name": "Noxcare - Portal TRE", "url": "https://rvt-tre.nox.app.br/portal-ui/#/login", "badge": "TRE" }, { "name": "Notification TRE", "url": "https://rvt-tre.nox.app.br/auth-api/login", "badge": "TRE" }] }, "Cisne": { "logo": "static/cisne-logo.png", "links": [{ "name": "Noxcare PRD", "url": "https://cisne-prd.nox.app.br/#/", "badge": "PRD" }, { "name": "IS - Portal PRD", "url": "https://cisne-prd.nox.app.br/portal-ui/#/login", "badge": "PRD" }, { "name": "Notification PRD", "url": "https://cisne-prd.nox.app.br/auth-api/login", "badge": "PRD" }, { "name": "IS4 PRD", "url": "http://is4.redeis.com.br:8888/cisne-prd/logon.jsp?sys=SIH&action=logout&back=true", "badge": "PRD" }, { "name": "Noxcare TRE", "url": "https://cisne-tre.nox.app.br/#/", "badge": "TRE" }, { "name": "IS - Portal TRE", "url": "https://cisne-tre.nox.app.br/portal-ui/#/login", "badge": "TRE" }, { "name": "Notification TRE", "url": "https://cisne-tre.nox.app.br/auth-api/login", "badge": "TRE" }] }, "Santa Maria": { "logo": "static/hsm-logo.png", "links": [{ "name": "Noxcare PRD", "url": "https://hsm-prd.nox.app.br/#/", "badge": "PRD" }, { "name": "IS - Portal PRD", "url": "https://hsm-prd.nox.app.br/portal-ui/#/login", "badge": "PRD" }, { "name": "IS4 PRD", "url": "https://is4.redeis.com.br/hsm-prd/", "badge": "PRD" }, { "name": "Notification PRD", "url": "https://hsm-prd.nox.app.br/auth-api/login", "badge": "PRD" }, { "name": "Noxcare TRE", "url": "https://hsm-tre.nox.app.br/#/", "badge": "TRE" }, { "name": "IS - Portal TRE", "url": "https://hsm-tre.nox.app.br/portal-ui/#/login", "badge": "TRE" }, { "name": "IS4 TRE", "url": "https://is4.redeis.com.br/hsm-tre/", "badge": "TRE" }, { "name": "Notification TRE", "url": "https://hsm-tre.nox.app.br/auth-api/login", "badge": "TRE" }, { "name": "Sharepoint / Docs", "url": "https://noxtecservicos.sharepoint.com/sites/DiretoriadeTecnologia/Documentos%20Compartilhados/Forms/AllItems.aspx", "badge": "INT" }] } } }, "Rio de Janeiro": { "flag": "static/bandeira-rj.png", "clients": { "Nova Friburgo": { "logo": "static/nfb-logo.png", "links": [{ "name": "Noxcare NFB PRD", "url": "https://nfb-prd.nox.app.br/#/", "badge": "PRD" }, { "name": "Regulação NFB PRD", "url": "https://nfb-prd.nox.app.br/regulation-ui/login/select-user-health-unit", "badge": "PRD" }, { "name": "IS4 PRD", "url": "http://is4.redeis.com.br:8888/nfb/", "badge": "PRD" }, { "name": "Noxcare TRE", "url": "https://nfb-tre.nox.app.br/#/", "badge": "TRE" }, { "name": "Regulação TRE", "url": "https://nfb-tre.nox.app.br/regulation-ui/regulation/waiting-list", "badge": "TRE" }, { "name": "IS4 TRE", "url": "http://is4.redeis.com.br:8888/nfb-tre/", "badge": "TRE" }, { "name": "PEC", "url": "https://esusab.pmnf.rj.gov.br:8080/", "badge": "EXT" }, { "name": "BI Regulação", "url": "https://app.powerbi.com/view?r=eyJrIjoiNGQ2OTg0ZjYtNDg5OC00OTk3LThhMDMtMDMyNzA0YTM0OGVhIiwidCI6ImYyYmM4YzM3LWFmYjgtNDE1Ny1hNGFmLWRlYTAxNjQ3OGU1ZSJ9", "badge": "BI" }, { "name": "IS-Indicadores", "url": "https://nfb.redeis.com.br/nfb-ui-is/IS-indicadores/#/", "badge": "BI" }, { "name": "NOXTEC - Login", "url": "https://noxcare.saladegestao.com.br/gestao/login", "badge": "INT" }] } } } };
 
-        var USERS = { "admin": { "password": "noxtec2026", "role": "admin" } };
+        var storedAppData = localStorage.getItem('painelAppData');
+        var APP_DATA = storedAppData ? JSON.parse(storedAppData) : defaultAPP_DATA;
+
+        function saveData() {
+            localStorage.setItem('painelAppData', JSON.stringify(APP_DATA));
+        }
+
+        var USERS = { "admin": { "password": "adminnoxtec2026", "role": "admin" }, "comum": { "password": "timetech", "role": "user" } };
 
         var session = { loggedIn: false, username: '', role: 'user' };
         var currentPage = '';
@@ -1328,6 +1344,7 @@
                 APP_DATA[nome] = APP_DATA[antigo];
                 delete APP_DATA[antigo];
             }
+            saveData();
             closeModals();
             renderCurrentPage();
             return false;
@@ -1344,6 +1361,7 @@
                 APP_DATA[estado].clients[nome] = APP_DATA[estado].clients[antigo];
                 delete APP_DATA[estado].clients[antigo];
             }
+            saveData();
             closeModals();
             renderCurrentPage();
             return false;
@@ -1358,6 +1376,7 @@
             var badge = document.getElementById('link_badge').value;
             if (!nome || !url) return false;
             APP_DATA[estado].clients[cliente].links[linkId] = { name: nome, url: url, badge: badge };
+            saveData();
             closeModals();
             renderCurrentPage();
             return false;
@@ -1366,16 +1385,19 @@
         function deleteEstado(nome) {
             if (!confirm('Excluir estado ' + nome + ' e todos os seus dados?')) return;
             delete APP_DATA[nome];
+            saveData();
             renderCurrentPage();
         }
         function deleteCliente(estado, nome) {
             if (!confirm('Excluir cliente ' + nome + '?')) return;
             delete APP_DATA[estado].clients[nome];
+            saveData();
             renderCurrentPage();
         }
         function deleteLink(estado, cliente, idx) {
             if (!confirm('Excluir link?')) return;
             APP_DATA[estado].clients[cliente].links.splice(idx, 1);
+            saveData();
             renderCurrentPage();
         }
 
@@ -1387,6 +1409,7 @@
             if (!nome) { msgEl.innerHTML = '<div class="msg erro">Preencha o nome do estado</div>'; return false; }
             if (APP_DATA[nome]) { msgEl.innerHTML = '<div class="msg erro">Estado "' + esc(nome) + '" já existe</div>'; return false; }
             APP_DATA[nome] = { flag: flag, clients: {} };
+            saveData();
             msgEl.innerHTML = '<div class="msg sucesso">Estado "' + esc(nome) + '" cadastrado</div>';
             document.getElementById('cad-estado-nome').value = '';
             document.getElementById('cad-estado-flag').value = '';
@@ -1403,6 +1426,7 @@
             if (!APP_DATA[estado]) { msgEl.innerHTML = '<div class="msg erro">Estado não encontrado</div>'; return false; }
             if (APP_DATA[estado].clients[nome]) { msgEl.innerHTML = '<div class="msg erro">Cliente "' + esc(nome) + '" já existe em ' + esc(estado) + '</div>'; return false; }
             APP_DATA[estado].clients[nome] = { logo: logo, links: [] };
+            saveData();
             msgEl.innerHTML = '<div class="msg sucesso">Cliente "' + esc(nome) + '" cadastrado em ' + esc(estado) + '</div>';
             document.getElementById('cad-cliente-nome').value = '';
             document.getElementById('cad-cliente-logo').value = '';
@@ -1420,6 +1444,7 @@
             if (!APP_DATA[estado]) { msgEl.innerHTML = '<div class="msg erro">Estado não encontrado</div>'; return false; }
             if (!APP_DATA[estado].clients[cliente]) { msgEl.innerHTML = '<div class="msg erro">Cliente não encontrado</div>'; return false; }
             APP_DATA[estado].clients[cliente].links.push({ name: nome, url: url, badge: badge });
+            saveData();
             msgEl.innerHTML = '<div class="msg sucesso">Portal "' + esc(nome) + '" cadastrado em ' + esc(estado) + '/' + esc(cliente) + '</div>';
             document.getElementById('cad-portal-nome').value = '';
             document.getElementById('cad-portal-url').value = '';
