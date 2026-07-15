@@ -435,354 +435,6 @@
             color: #5349B1;
         }
 
-        .btn-edit-card {
-            position: absolute;
-            top: 0.8rem;
-            right: 0.8rem;
-            padding: 0.3rem 0.7rem;
-            background: #5349B1;
-            color: white;
-            border: none;
-            border-radius: 6px;
-            font-family: 'Roboto', sans-serif;
-            font-size: 0.75rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background 0.3s;
-            z-index: 2;
-        }
-
-        .btn-edit-card:hover {
-            background: #4338a0;
-        }
-
-        .btn-edit-sm {
-            padding: 0.2rem 0.6rem;
-            background: #5349B1;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            font-family: 'Roboto', sans-serif;
-            font-size: 0.7rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background 0.3s;
-            flex-shrink: 0;
-        }
-
-        .btn-edit-sm:hover {
-            background: #4338a0;
-        }
-
-        .btn-edit {
-            padding: 0.3rem 0.8rem;
-            background: #5349B1;
-            color: white;
-            border: none;
-            border-radius: 6px;
-            font-family: 'Roboto', sans-serif;
-            font-size: 0.75rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-
-        .btn-edit:hover {
-            background: #4338a0;
-        }
-
-        .btn-del {
-            padding: 0.3rem 0.8rem;
-            background: #e53e3e;
-            color: white;
-            border: none;
-            border-radius: 6px;
-            font-family: 'Roboto', sans-serif;
-            font-size: 0.75rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-
-        .btn-del:hover {
-            background: #c53030;
-        }
-
-        .btn-del-sm {
-            padding: 0.2rem 0.6rem;
-            background: #e53e3e;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            font-family: 'Roboto', sans-serif;
-            font-size: 0.7rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-
-        .btn-del-sm:hover {
-            background: #c53030;
-        }
-
-        .modal-overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 1000;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .modal-overlay.active {
-            display: flex;
-        }
-
-        .modal {
-            background: white;
-            border-radius: 16px;
-            padding: 2rem;
-            width: 90%;
-            max-width: 500px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-        }
-
-        .modal h2 {
-            color: #2d3748;
-            font-size: 1.3rem;
-            margin-bottom: 1.5rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid #e2e8f0;
-        }
-
-        .modal .form-group {
-            margin-bottom: 1.2rem;
-        }
-
-        .modal label {
-            display: block;
-            font-weight: 500;
-            color: #4a5568;
-            margin-bottom: 0.4rem;
-            font-size: 0.9rem;
-        }
-
-        .modal input,
-        .modal select {
-            width: 100%;
-            padding: 0.7rem 1rem;
-            border: 2px solid #e2e8f0;
-            border-radius: 10px;
-            font-family: 'Roboto', sans-serif;
-            font-size: 0.9rem;
-            transition: border-color 0.3s;
-        }
-
-        .modal input:focus,
-        .modal select:focus {
-            outline: none;
-            border-color: #5349B1;
-        }
-
-        .modal small {
-            color: #718096;
-            font-size: 0.8rem;
-        }
-
-        .modal-actions {
-            display: flex;
-            gap: 0.8rem;
-            justify-content: flex-end;
-            margin-top: 1.5rem;
-        }
-
-        .btn-cancel {
-            padding: 0.7rem 1.5rem;
-            background: #e2e8f0;
-            color: #4a5568;
-            border: none;
-            border-radius: 10px;
-            font-family: 'Roboto', sans-serif;
-            font-size: 0.9rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-
-        .btn-cancel:hover {
-            background: #cbd5e1;
-        }
-
-        .btn-save {
-            padding: 0.7rem 1.5rem;
-            background: #5349B1;
-            color: white;
-            border: none;
-            border-radius: 10px;
-            font-family: 'Roboto', sans-serif;
-            font-size: 0.9rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-
-        .btn-save:hover {
-            background: #4338a0;
-        }
-
-        .form-card {
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 16px;
-            padding: 2rem;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .form-card h2 {
-            color: #2d3748;
-            font-size: 1.3rem;
-            margin-bottom: 1.5rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid #e2e8f0;
-        }
-
-        .inline-group {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
-        }
-
-        .state-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 1rem;
-        }
-
-        .state-header h2 {
-            color: #2d3748;
-            font-size: 1.3rem;
-        }
-
-        .state-flag-admin {
-            width: 50px;
-            height: 34px;
-            object-fit: contain;
-            border-radius: 4px;
-        }
-
-        .state-left {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .state-actions {
-            display: flex;
-            gap: 0.5rem;
-        }
-
-        .client-item {
-            border-left: 3px solid #5349B1;
-            padding: 1rem 1rem 1rem 1.5rem;
-            margin-bottom: 0.8rem;
-            background: rgba(83, 73, 177, 0.04);
-            border-radius: 0 8px 8px 0;
-        }
-
-        .client-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 0.5rem;
-        }
-
-        .client-header h3 {
-            color: #4a5568;
-            font-size: 1rem;
-            font-weight: 600;
-        }
-
-        .client-logo-mini {
-            width: 28px;
-            height: 28px;
-            object-fit: contain;
-            border-radius: 4px;
-            margin-right: 0.5rem;
-        }
-
-        .client-name-row {
-            display: flex;
-            align-items: center;
-        }
-
-        .client-actions {
-            display: flex;
-            gap: 0.4rem;
-        }
-
-        .link-item {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0.4rem 0.8rem;
-            margin-bottom: 0.3rem;
-            border-radius: 6px;
-            background: rgba(255, 255, 255, 0.7);
-            font-size: 0.85rem;
-        }
-
-        .link-url {
-            color: #718096;
-            font-size: 0.8rem;
-            max-width: 300px;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-        }
-
-        .link-badge {
-            font-size: 0.65rem;
-            padding: 0.2rem 0.5rem;
-            border-radius: 10px;
-            font-weight: 600;
-            text-transform: uppercase;
-        }
-
-        .link-badge.prd {
-            background: #c6f6d5;
-            color: #22543d;
-        }
-
-        .link-badge.tre {
-            background: #feebc8;
-            color: #7b341e;
-        }
-
-        .link-badge.int {
-            background: #bee3f8;
-            color: #2a4365;
-        }
-
-        .link-badge.ext {
-            background: #fefcbf;
-            color: #744210;
-        }
-
-        .link-badge.bi {
-            background: #e9d8fd;
-            color: #44337a;
-        }
-
-        .link-actions {
-            display: flex;
-            gap: 0.3rem;
-            align-items: center;
-        }
-
         .no-data {
             color: #a0aec0;
             font-style: italic;
@@ -792,10 +444,6 @@
 
         @media (max-width: 600px) {
             .category-body {
-                grid-template-columns: 1fr;
-            }
-
-            .inline-group {
                 grid-template-columns: 1fr;
             }
         }
@@ -865,186 +513,6 @@
         <div class="container flex-container" id="links-container"></div>
     </div>
 
-    <!-- CADASTRO -->
-    <div id="page-cadastro" class="page">
-        <div class="top-bar">
-            <a href="#" onclick="navigate('estados');return false;" class="logo-link"><img src="static/noxtec-logo-branca.png" alt="NoxTec" style="height:36px;"></a>
-            <div id="topbar-cadastro"></div>
-        </div>
-        <header>
-            <h1>Cadastro</h1>
-        </header>
-        <div class="container flex-container">
-            <div id="cadastro-msg"></div>
-            <div class="form-card">
-                <h2>Novo Estado</h2>
-                <form onsubmit="return cadastroEstado(event)">
-                    <div class="form-group">
-                        <label>Nome do Estado</label>
-                        <input type="text" id="cad-estado-nome" placeholder="Ex: São Paulo" required>
-                    </div>
-                    <div class="form-group">
-                        <label>URL da Bandeira (SVG/PNG)</label>
-                        <input type="url" id="cad-estado-flag" placeholder="https://...">
-                        <small style="color:#718096;font-size:0.8rem;">Cole o link da imagem da bandeira
-                            (opcional)</small>
-                    </div>
-                    <button type="submit" class="btn">Cadastrar Estado</button>
-                </form>
-            </div>
-            <div class="form-card">
-                <h2>Novo Cliente</h2>
-                <form onsubmit="return cadastroCliente(event)">
-                    <div class="form-group">
-                        <label>Estado</label>
-                        <select id="cad-cliente-estado" required>
-                            <option value="">Selecione...</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label>Nome do Cliente</label>
-                        <input type="text" id="cad-cliente-nome" placeholder="Ex: Hospital São Lucas" required>
-                    </div>
-                    <div class="form-group">
-                        <label>URL da Logo</label>
-                        <input type="url" id="cad-cliente-logo" placeholder="https://...">
-                        <small style="color:#718096;font-size:0.8rem;">Cole o link da imagem da logo (opcional)</small>
-                    </div>
-                    <button type="submit" class="btn">Cadastrar Cliente</button>
-                </form>
-            </div>
-            <div class="form-card">
-                <h2>Novo Portal / Link</h2>
-                <form onsubmit="return cadastroPortal(event)">
-                    <div class="inline-group">
-                        <div class="form-group">
-                            <label>Estado</label>
-                            <select id="cad-portal-estado" required>
-                                <option value="">Selecione...</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label>Cliente</label>
-                            <select id="cad-portal-cliente" required>
-                                <option value="">Selecione um estado primeiro</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label>Nome do Portal</label>
-                        <input type="text" id="cad-portal-nome" placeholder="Ex: Noxcare PRD" required>
-                    </div>
-                    <div class="form-group">
-                        <label>URL</label>
-                        <input type="url" id="cad-portal-url" placeholder="https://..." required>
-                    </div>
-                    <div class="form-group">
-                        <label>Badge (tipo)</label>
-                        <select id="cad-portal-badge">
-                            <option value="PRD">PRD</option>
-                            <option value="TRE">TRE</option>
-                            <option value="INT">INT</option>
-                            <option value="EXT">EXT</option>
-                            <option value="BI">BI</option>
-                        </select>
-                    </div>
-                    <button type="submit" class="btn">Cadastrar Portal</button>
-                </form>
-            </div>
-        </div>
-    </div>
-
-    <!-- ADMIN -->
-    <div id="page-admin" class="page">
-        <div class="top-bar">
-            <a href="#" onclick="navigate('estados');return false;" class="logo-link"><img src="static/noxtec-logo-branca.png" alt="NoxTec" style="height:36px;"></a>
-            <div id="topbar-admin"></div>
-        </div>
-        <header>
-            <h1>Administração</h1>
-        </header>
-        <div class="container" id="admin-container"></div>
-    </div>
-
-    <!-- MODALS -->
-    <div class="modal-overlay" id="modalEstado">
-        <div class="modal">
-            <h2>Editar Estado</h2>
-            <form onsubmit="return saveEditEstado(event)">
-                <input type="hidden" id="estado_antigo">
-                <div class="form-group">
-                    <label>Nome do Estado</label>
-                    <input type="text" id="estado_nome" required>
-                </div>
-                <div class="form-group">
-                    <label>URL da Bandeira</label>
-                    <input type="url" id="estado_flag" placeholder="https://...">
-                    <small>Cole o link da imagem da bandeira (opcional)</small>
-                </div>
-                <div class="modal-actions">
-                    <button type="button" class="btn-cancel" onclick="closeModals()">Cancelar</button>
-                    <button type="submit" class="btn-save">Salvar</button>
-                </div>
-            </form>
-        </div>
-    </div>
-
-    <div class="modal-overlay" id="modalCliente">
-        <div class="modal">
-            <h2>Editar Cliente</h2>
-            <form onsubmit="return saveEditCliente(event)">
-                <input type="hidden" id="cliente_estado">
-                <input type="hidden" id="cliente_antigo">
-                <div class="form-group">
-                    <label>Nome do Cliente</label>
-                    <input type="text" id="cliente_nome_input" required>
-                </div>
-                <div class="form-group">
-                    <label>URL da Logo</label>
-                    <input type="url" id="cliente_logo" placeholder="https://...">
-                    <small>Cole o link da imagem da logo (opcional)</small>
-                </div>
-                <div class="modal-actions">
-                    <button type="button" class="btn-cancel" onclick="closeModals()">Cancelar</button>
-                    <button type="submit" class="btn-save">Salvar</button>
-                </div>
-            </form>
-        </div>
-    </div>
-
-    <div class="modal-overlay" id="modalLink">
-        <div class="modal">
-            <h2>Editar Link</h2>
-            <form onsubmit="return saveEditLink(event)">
-                <input type="hidden" id="link_estado">
-                <input type="hidden" id="link_cliente">
-                <input type="hidden" id="link_id">
-                <div class="form-group">
-                    <label>Nome do Portal</label>
-                    <input type="text" id="link_nome" required>
-                </div>
-                <div class="form-group">
-                    <label>URL</label>
-                    <input type="url" id="link_url" required>
-                </div>
-                <div class="form-group">
-                    <label>Badge (tipo)</label>
-                    <select id="link_badge">
-                        <option value="PRD">PRD - Produção</option>
-                        <option value="TRE">TRE - Treinamento</option>
-                        <option value="INT">INT - Interno</option>
-                        <option value="EXT">EXT - Externo</option>
-                        <option value="BI">BI - Business Intelligence</option>
-                    </select>
-                </div>
-                <div class="modal-actions">
-                    <button type="button" class="btn-cancel" onclick="closeModals()">Cancelar</button>
-                    <button type="submit" class="btn-save">Salvar</button>
-                </div>
-            </form>
-        </div>
-    </div>
-
     <script>
         var defaultAPP_DATA = { "Pernambuco": { "flag": "static/bandeira-pe.webp", "clients": { "AFPES": { "logo": "static/afpes-logo.png", "links": [{ "name": "Noxcare PRD", "url": "https://afpes-prd.nox.app.br/#/", "badge": "PRD" }, { "name": "IS - Portal PRD", "url": "https://afpes-prd.nox.app.br/portal-ui/#/login", "badge": "PRD" }, { "name": "Notification PRD", "url": "https://afpes-prd.nox.app.br/auth-api/login", "badge": "PRD" }, { "name": "Noxcare TRE", "url": "https://afpes-tre.nox.app.br/#/", "badge": "TRE" }, { "name": "IS - Portal TRE", "url": "https://afpes-tre.nox.app.br/portal-ui/#/login", "badge": "TRE" }, { "name": "Notification TRE", "url": "https://afpes-tre.nox.app.br/auth-api/login", "badge": "TRE" }] }, "Rede Virtude": { "logo": "static/rvt-logo.png", "links": [{ "name": "Noxcare PRD", "url": "https://rvt-prd.nox.app.br/#/", "badge": "PRD" }, { "name": "IS4 PRD", "url": "https://is4.redeis.com.br/rvt-prd/", "badge": "PRD" }, { "name": "Noxcare - Portal PRD", "url": "https://rvt-prd.nox.app.br/portal-ui/#/login", "badge": "PRD" }, { "name": "Notification PRD", "url": "https://rvt-prd.nox.app.br/auth-api/login", "badge": "PRD" }, { "name": "Noxcare TRE", "url": "https://rvt-tre.nox.app.br/#/", "badge": "TRE" }, { "name": "IS4 TRE", "url": "https://is4.redeis.com.br/rvt-tre/", "badge": "TRE" }, { "name": "Noxcare - Portal TRE", "url": "https://rvt-tre.nox.app.br/portal-ui/#/login", "badge": "TRE" }, { "name": "Notification TRE", "url": "https://rvt-tre.nox.app.br/auth-api/login", "badge": "TRE" }] }, "Cisne": { "logo": "static/cisne-logo.png", "links": [{ "name": "Noxcare PRD", "url": "https://cisne-prd.nox.app.br/#/", "badge": "PRD" }, { "name": "IS - Portal PRD", "url": "https://cisne-prd.nox.app.br/portal-ui/#/login", "badge": "PRD" }, { "name": "Notification PRD", "url": "https://cisne-prd.nox.app.br/auth-api/login", "badge": "PRD" }, { "name": "IS4 PRD", "url": "http://is4.redeis.com.br:8888/cisne-prd/logon.jsp?sys=SIH&action=logout&back=true", "badge": "PRD" }, { "name": "Noxcare TRE", "url": "https://cisne-tre.nox.app.br/#/", "badge": "TRE" }, { "name": "IS - Portal TRE", "url": "https://cisne-tre.nox.app.br/portal-ui/#/login", "badge": "TRE" }, { "name": "Notification TRE", "url": "https://cisne-tre.nox.app.br/auth-api/login", "badge": "TRE" }] }, "Santa Maria": { "logo": "static/hsm-logo.png", "links": [{ "name": "Noxcare PRD", "url": "https://hsm-prd.nox.app.br/#/", "badge": "PRD" }, { "name": "IS - Portal PRD", "url": "https://hsm-prd.nox.app.br/portal-ui/#/login", "badge": "PRD" }, { "name": "IS4 PRD", "url": "https://is4.redeis.com.br/hsm-prd/", "badge": "PRD" }, { "name": "Notification PRD", "url": "https://hsm-prd.nox.app.br/auth-api/login", "badge": "PRD" }, { "name": "Noxcare TRE", "url": "https://hsm-tre.nox.app.br/#/", "badge": "TRE" }, { "name": "IS - Portal TRE", "url": "https://hsm-tre.nox.app.br/portal-ui/#/login", "badge": "TRE" }, { "name": "IS4 TRE", "url": "https://is4.redeis.com.br/hsm-tre/", "badge": "TRE" }, { "name": "Notification TRE", "url": "https://hsm-tre.nox.app.br/auth-api/login", "badge": "TRE" }, { "name": "Sharepoint / Docs", "url": "https://noxtecservicos.sharepoint.com/sites/DiretoriadeTecnologia/Documentos%20Compartilhados/Forms/AllItems.aspx", "badge": "INT" }] } } }, "Rio de Janeiro": { "flag": "static/bandeira-rj.png", "clients": { "Nova Friburgo": { "logo": "static/nfb-logo.png", "links": [{ "name": "Noxcare NFB PRD", "url": "https://nfb-prd.nox.app.br/#/", "badge": "PRD" }, { "name": "Regulação NFB PRD", "url": "https://nfb-prd.nox.app.br/regulation-ui/login/select-user-health-unit", "badge": "PRD" }, { "name": "IS4 PRD", "url": "http://is4.redeis.com.br:8888/nfb/", "badge": "PRD" }, { "name": "Noxcare TRE", "url": "https://nfb-tre.nox.app.br/#/", "badge": "TRE" }, { "name": "Regulação TRE", "url": "https://nfb-tre.nox.app.br/regulation-ui/regulation/waiting-list", "badge": "TRE" }, { "name": "IS4 TRE", "url": "http://is4.redeis.com.br:8888/nfb-tre/", "badge": "TRE" }, { "name": "PEC", "url": "https://esusab.pmnf.rj.gov.br:8080/", "badge": "EXT" }, { "name": "BI Regulação", "url": "https://app.powerbi.com/view?r=eyJrIjoiNGQ2OTg0ZjYtNDg5OC00OTk3LThhMDMtMDMyNzA0YTM0OGVhIiwidCI6ImYyYmM4YzM3LWFmYjgtNDE1Ny1hNGFmLWRlYTAxNjQ3OGU1ZSJ9", "badge": "BI" }, { "name": "IS-Indicadores", "url": "https://nfb.redeis.com.br/nfb-ui-is/IS-indicadores/#/", "badge": "BI" }, { "name": "NOXTEC - Login", "url": "https://noxcare.saladegestao.com.br/gestao/login", "badge": "INT" }] } } } };
 
@@ -1055,9 +523,9 @@
             localStorage.setItem('painelAppData', JSON.stringify(APP_DATA));
         }
 
-        var USERS = { "admin": { "password": "adminnoxtec2026", "role": "admin" }, "comum": { "password": "timetech", "role": "user" } };
+        var USERS = { "comum": { "password": "timetech" } };
 
-        var session = { loggedIn: false, username: '', role: 'user' };
+        var session = { loggedIn: false, username: '' };
         var currentPage = '';
         var navEstado = '';
         var navCliente = '';
@@ -1070,15 +538,6 @@
 
         function renderTopbar(containerId) {
             var html = '<div>';
-            if (session.role === 'admin') {
-                html += '<a href="#" onclick="navigate(\'admin\');return false;">Admin</a> ';
-            }
-            if (currentPage === 'estados' || currentPage === 'clientes' || currentPage === 'links') {
-                html += '<a href="#" onclick="navigate(\'cadastro\');return false;">+ Cadastro</a> ';
-            }
-            if (currentPage === 'admin') {
-                html += '<a href="#" onclick="navigate(\'cadastro\');return false;">+ Cadastro</a> ';
-            }
             if (currentPage !== 'estados' && currentPage !== 'login') {
                 html += '<a href="#" onclick="navigate(\'estados\');return false;">Estados</a> ';
             }
@@ -1093,9 +552,6 @@
             for (var nome in APP_DATA) {
                 var info = APP_DATA[nome];
                 html += '<div class="state-card">';
-                if (session.role === 'admin') {
-                    html += '<button class="btn-edit-card" onclick="event.stopPropagation();openEditEstado(\'' + esc(nome) + '\',\'' + esc(info.flag || '') + '\')">Editar</button>';
-                }
                 html += '<a href="#" onclick="navigate(\'clientes\',\'' + esc(nome) + '\');return false;" style="text-decoration:none;color:inherit;display:flex;flex-direction:column;align-items:center;gap:1rem;width:100%;">';
                 if (info.flag) {
                     html += '<img class="state-flag" src="' + esc(info.flag) + '" alt="' + esc(nome) + '">';
@@ -1124,9 +580,6 @@
             for (var nome in clients) {
                 var cli = clients[nome];
                 html += '<div class="client-card">';
-                if (session.role === 'admin') {
-                    html += '<button class="btn-edit-card" onclick="event.stopPropagation();openEditCliente(\'' + esc(estado) + '\',\'' + esc(nome) + '\',\'' + esc(cli.logo || '') + '\')">Editar</button>';
-                }
                 html += '<a href="#" onclick="navigate(\'links\',\'' + esc(estado) + '\',\'' + esc(nome) + '\');return false;" style="text-decoration:none;color:inherit;display:flex;flex-direction:column;align-items:center;gap:1rem;width:100%;">';
                 if (cli.logo) {
                     html += '<img class="client-logo" src="' + esc(cli.logo) + '" alt="' + esc(nome) + '">';
@@ -1164,96 +617,9 @@
                     if (link.badge !== badge) continue;
                     html += '<a href="' + esc(link.url) + '" target="_blank" class="link-card">';
                     html += '<div class="link-info"><div class="link-name">' + esc(link.name) + '</div><div class="link-url-text">' + esc(link.url) + '</div></div>';
-                    if (session.role === 'admin') {
-                        html += '<button class="btn-edit-sm" onclick="event.preventDefault();event.stopPropagation();openEditLink(' + i + ',\'' + esc(link.name) + '\',\'' + esc(link.url) + '\',\'' + esc(link.badge) + '\')">Editar</button>';
-                    }
                     html += '<span class="link-arrow">&#8250;</span></a>';
                 }
                 html += '</div></div>';
-            }
-            container.innerHTML = html;
-        }
-
-        function renderCadastro() {
-            renderTopbar('topbar-cadastro');
-            var estadoSelects = document.querySelectorAll('#cad-cliente-estado, #cad-portal-estado');
-            for (var s = 0; s < estadoSelects.length; s++) {
-                var sel = estadoSelects[s];
-                var val = sel.value;
-                sel.innerHTML = '<option value="">Selecione...</option>';
-                for (var nome in APP_DATA) {
-                    var opt = document.createElement('option');
-                    opt.value = nome;
-                    opt.textContent = nome;
-                    sel.appendChild(opt);
-                }
-                sel.value = val;
-            }
-            document.getElementById('cad-portal-estado').onchange = function () {
-                var estado = this.value;
-                var cliSel = document.getElementById('cad-portal-cliente');
-                cliSel.innerHTML = '<option value="">Selecione...</option>';
-                if (estado && APP_DATA[estado] && APP_DATA[estado].clients) {
-                    for (var c in APP_DATA[estado].clients) {
-                        var o = document.createElement('option');
-                        o.value = c;
-                        o.textContent = c;
-                        cliSel.appendChild(o);
-                    }
-                }
-            };
-        }
-
-        function renderAdmin() {
-            renderTopbar('topbar-admin');
-            var container = document.getElementById('admin-container');
-            var html = '';
-            for (var estadoNome in APP_DATA) {
-                var estadoInfo = APP_DATA[estadoNome];
-                html += '<div class="state-card" style="display:block;text-align:left;">';
-                html += '<div class="state-header"><div class="state-left">';
-                if (estadoInfo.flag) {
-                    html += '<img class="state-flag-admin" src="' + esc(estadoInfo.flag) + '" alt="' + esc(estadoNome) + '">';
-                }
-                html += '<h2>' + esc(estadoNome) + '</h2></div>';
-                html += '<div class="state-actions">';
-                html += '<button class="btn-edit" onclick="openEditEstado(\'' + esc(estadoNome) + '\',\'' + esc(estadoInfo.flag || '') + '\')">Editar</button>';
-                html += '<button class="btn-del" onclick="deleteEstado(\'' + esc(estadoNome) + '\')">Excluir</button>';
-                html += '</div></div>';
-                var clients = estadoInfo.clients || {};
-                if (Object.keys(clients).length === 0) {
-                    html += '<div class="no-data">Nenhum cliente cadastrado</div>';
-                } else {
-                    for (var cliNome in clients) {
-                        var cliInfo = clients[cliNome];
-                        html += '<div class="client-item"><div class="client-header"><div class="client-name-row">';
-                        if (cliInfo.logo) {
-                            html += '<img class="client-logo-mini" src="' + esc(cliInfo.logo) + '" alt="' + esc(cliNome) + '">';
-                        }
-                        html += '<h3>' + esc(cliNome) + '</h3></div>';
-                        html += '<div class="client-actions">';
-                        html += '<button class="btn-edit-sm" onclick="openEditCliente(\'' + esc(estadoNome) + '\',\'' + esc(cliNome) + '\',\'' + esc(cliInfo.logo || '') + '\')">Editar</button>';
-                        html += '<button class="btn-del-sm" onclick="deleteCliente(\'' + esc(estadoNome) + '\',\'' + esc(cliNome) + '\')">Excluir</button>';
-                        html += '</div></div>';
-                        var links = cliInfo.links || [];
-                        if (links.length === 0) {
-                            html += '<div class="no-data">Nenhum link cadastrado</div>';
-                        } else {
-                            for (var li = 0; li < links.length; li++) {
-                                var lk = links[li];
-                                html += '<div class="link-item"><span class="link-name">' + esc(lk.name) + '</span>';
-                                html += '<span class="link-url">' + esc(lk.url) + '</span>';
-                                html += '<div class="link-actions">';
-                                html += '<span class="link-badge ' + lk.badge.toLowerCase() + '">' + esc(lk.badge) + '</span>';
-                                html += '<button class="btn-edit-sm" onclick="openEditLink(' + li + ',\'' + esc(lk.name) + '\',\'' + esc(lk.url) + '\',\'' + esc(lk.badge) + '\',\'' + esc(estadoNome) + '\',\'' + esc(cliNome) + '\')">Editar</button>';
-                                html += '<button class="btn-del-sm" onclick="deleteLink(\'' + esc(estadoNome) + '\',\'' + esc(cliNome) + '\',' + li + ')">Excluir</button>';
-                                html += '</div></div>';
-                            }
-                        }
-                        html += '</div>';
-                    }
-                }
-                html += '</div>';
             }
             container.innerHTML = html;
         }
@@ -1291,172 +657,19 @@
             }
             session.loggedIn = true;
             session.username = u;
-            session.role = (typeof user === 'object' && user.role) ? user.role : 'user';
             navigate('estados');
             return false;
         }
 
         function doLogout() {
-            session = { loggedIn: false, username: '', role: 'user' };
+            session = { loggedIn: false, username: '' };
             navigate('login');
-        }
-
-        function openEditEstado(nome, flag) {
-            document.getElementById('estado_antigo').value = nome;
-            document.getElementById('estado_nome').value = nome;
-            document.getElementById('estado_flag').value = flag || '';
-            document.getElementById('modalEstado').classList.add('active');
-        }
-        function openEditCliente(estado, nome, logo) {
-            document.getElementById('cliente_estado').value = estado;
-            document.getElementById('cliente_antigo').value = nome;
-            document.getElementById('cliente_nome_input').value = nome;
-            document.getElementById('cliente_logo').value = logo || '';
-            document.getElementById('modalCliente').classList.add('active');
-        }
-        function openEditLink(linkId, nome, url, badge, estadoOverride, clienteOverride) {
-            if (estadoOverride !== undefined) {
-                document.getElementById('link_estado').value = estadoOverride;
-                document.getElementById('link_cliente').value = clienteOverride;
-            } else {
-                document.getElementById('link_estado').value = navEstado;
-                document.getElementById('link_cliente').value = navCliente;
-            }
-            document.getElementById('link_id').value = linkId;
-            document.getElementById('link_nome').value = nome;
-            document.getElementById('link_url').value = url;
-            document.getElementById('link_badge').value = badge;
-            document.getElementById('modalLink').classList.add('active');
-        }
-        function closeModals() {
-            var modals = document.querySelectorAll('.modal-overlay');
-            for (var i = 0; i < modals.length; i++) modals[i].classList.remove('active');
-        }
-
-        function saveEditEstado(e) {
-            e.preventDefault();
-            var antigo = document.getElementById('estado_antigo').value;
-            var nome = document.getElementById('estado_nome').value.trim();
-            var flag = document.getElementById('estado_flag').value.trim();
-            if (!nome) return false;
-            if (flag) APP_DATA[antigo].flag = flag;
-            if (nome !== antigo) {
-                APP_DATA[nome] = APP_DATA[antigo];
-                delete APP_DATA[antigo];
-            }
-            saveData();
-            closeModals();
-            renderCurrentPage();
-            return false;
-        }
-        function saveEditCliente(e) {
-            e.preventDefault();
-            var estado = document.getElementById('cliente_estado').value;
-            var antigo = document.getElementById('cliente_antigo').value;
-            var nome = document.getElementById('cliente_nome_input').value.trim();
-            var logo = document.getElementById('cliente_logo').value.trim();
-            if (!nome) return false;
-            if (logo) APP_DATA[estado].clients[antigo].logo = logo;
-            if (nome !== antigo) {
-                APP_DATA[estado].clients[nome] = APP_DATA[estado].clients[antigo];
-                delete APP_DATA[estado].clients[antigo];
-            }
-            saveData();
-            closeModals();
-            renderCurrentPage();
-            return false;
-        }
-        function saveEditLink(e) {
-            e.preventDefault();
-            var estado = document.getElementById('link_estado').value;
-            var cliente = document.getElementById('link_cliente').value;
-            var linkId = parseInt(document.getElementById('link_id').value);
-            var nome = document.getElementById('link_nome').value.trim();
-            var url = document.getElementById('link_url').value.trim();
-            var badge = document.getElementById('link_badge').value;
-            if (!nome || !url) return false;
-            APP_DATA[estado].clients[cliente].links[linkId] = { name: nome, url: url, badge: badge };
-            saveData();
-            closeModals();
-            renderCurrentPage();
-            return false;
-        }
-
-        function deleteEstado(nome) {
-            if (!confirm('Excluir estado ' + nome + ' e todos os seus dados?')) return;
-            delete APP_DATA[nome];
-            saveData();
-            renderCurrentPage();
-        }
-        function deleteCliente(estado, nome) {
-            if (!confirm('Excluir cliente ' + nome + '?')) return;
-            delete APP_DATA[estado].clients[nome];
-            saveData();
-            renderCurrentPage();
-        }
-        function deleteLink(estado, cliente, idx) {
-            if (!confirm('Excluir link?')) return;
-            APP_DATA[estado].clients[cliente].links.splice(idx, 1);
-            saveData();
-            renderCurrentPage();
-        }
-
-        function cadastroEstado(e) {
-            e.preventDefault();
-            var nome = document.getElementById('cad-estado-nome').value.trim();
-            var flag = document.getElementById('cad-estado-flag').value.trim();
-            var msgEl = document.getElementById('cadastro-msg');
-            if (!nome) { msgEl.innerHTML = '<div class="msg erro">Preencha o nome do estado</div>'; return false; }
-            if (APP_DATA[nome]) { msgEl.innerHTML = '<div class="msg erro">Estado "' + esc(nome) + '" já existe</div>'; return false; }
-            APP_DATA[nome] = { flag: flag, clients: {} };
-            saveData();
-            msgEl.innerHTML = '<div class="msg sucesso">Estado "' + esc(nome) + '" cadastrado</div>';
-            document.getElementById('cad-estado-nome').value = '';
-            document.getElementById('cad-estado-flag').value = '';
-            renderCadastro();
-            return false;
-        }
-        function cadastroCliente(e) {
-            e.preventDefault();
-            var estado = document.getElementById('cad-cliente-estado').value;
-            var nome = document.getElementById('cad-cliente-nome').value.trim();
-            var logo = document.getElementById('cad-cliente-logo').value.trim();
-            var msgEl = document.getElementById('cadastro-msg');
-            if (!estado || !nome) { msgEl.innerHTML = '<div class="msg erro">Preencha todos os campos</div>'; return false; }
-            if (!APP_DATA[estado]) { msgEl.innerHTML = '<div class="msg erro">Estado não encontrado</div>'; return false; }
-            if (APP_DATA[estado].clients[nome]) { msgEl.innerHTML = '<div class="msg erro">Cliente "' + esc(nome) + '" já existe em ' + esc(estado) + '</div>'; return false; }
-            APP_DATA[estado].clients[nome] = { logo: logo, links: [] };
-            saveData();
-            msgEl.innerHTML = '<div class="msg sucesso">Cliente "' + esc(nome) + '" cadastrado em ' + esc(estado) + '</div>';
-            document.getElementById('cad-cliente-nome').value = '';
-            document.getElementById('cad-cliente-logo').value = '';
-            return false;
-        }
-        function cadastroPortal(e) {
-            e.preventDefault();
-            var estado = document.getElementById('cad-portal-estado').value;
-            var cliente = document.getElementById('cad-portal-cliente').value;
-            var nome = document.getElementById('cad-portal-nome').value.trim();
-            var url = document.getElementById('cad-portal-url').value.trim();
-            var badge = document.getElementById('cad-portal-badge').value;
-            var msgEl = document.getElementById('cadastro-msg');
-            if (!estado || !cliente || !nome || !url) { msgEl.innerHTML = '<div class="msg erro">Preencha todos os campos</div>'; return false; }
-            if (!APP_DATA[estado]) { msgEl.innerHTML = '<div class="msg erro">Estado não encontrado</div>'; return false; }
-            if (!APP_DATA[estado].clients[cliente]) { msgEl.innerHTML = '<div class="msg erro">Cliente não encontrado</div>'; return false; }
-            APP_DATA[estado].clients[cliente].links.push({ name: nome, url: url, badge: badge });
-            saveData();
-            msgEl.innerHTML = '<div class="msg sucesso">Portal "' + esc(nome) + '" cadastrado em ' + esc(estado) + '/' + esc(cliente) + '</div>';
-            document.getElementById('cad-portal-nome').value = '';
-            document.getElementById('cad-portal-url').value = '';
-            return false;
         }
 
         function renderCurrentPage() {
             if (currentPage === 'estados') renderEstados();
             else if (currentPage === 'clientes') renderClientes();
             else if (currentPage === 'links') renderLinks();
-            else if (currentPage === 'cadastro') renderCadastro();
-            else if (currentPage === 'admin') renderAdmin();
         }
 
         function handleHash() {
@@ -1474,19 +687,8 @@
             if (page === 'estados') { showPage('estados'); renderEstados(); }
             else if (page === 'clientes') { navEstado = arg1; showPage('clientes'); renderClientes(); }
             else if (page === 'links') { navEstado = arg1; navCliente = arg2; showPage('links'); renderLinks(); }
-            else if (page === 'cadastro') { showPage('cadastro'); renderCadastro(); }
-            else if (page === 'admin') {
-                if (session.role !== 'admin') { navigate('estados'); return; }
-                showPage('admin'); renderAdmin();
-            }
             else { showPage('login'); }
         }
-
-        document.querySelectorAll('.modal-overlay').forEach(function (overlay) {
-            overlay.addEventListener('click', function (e) {
-                if (e.target === overlay) closeModals();
-            });
-        });
 
         window.addEventListener('hashchange', handleHash);
         handleHash();
