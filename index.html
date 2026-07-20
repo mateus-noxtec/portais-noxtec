@@ -149,6 +149,15 @@
             padding: 1rem 2rem;
         }
 
+        .top-bar .logout-btn {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.4rem 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 20px;
+        }
+
         .top-bar>span {
             color: white;
             font-weight: 600;
@@ -174,6 +183,7 @@
             border-radius: 0;
             padding: 0;
         }
+
         .top-bar .logo-link:hover {
             background: none;
         }
@@ -202,7 +212,7 @@
         }
 
         .container {
-            max-width: 900px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 2rem 4rem;
         }
@@ -324,24 +334,24 @@
         }
 
         .category-header {
-            padding: 1rem 1.5rem;
+            padding: 0.7rem 1rem;
             display: flex;
             align-items: center;
-            gap: 0.8rem;
+            gap: 0.6rem;
             font-weight: 700;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             color: white;
         }
 
         .category-header .cat-icon {
-            width: 36px;
-            height: 36px;
-            border-radius: 10px;
+            width: 30px;
+            height: 30px;
+            border-radius: 8px;
             background: rgba(255, 255, 255, 0.25);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 0.8rem;
+            font-size: 0.7rem;
             font-weight: 700;
             letter-spacing: 0.5px;
         }
@@ -349,9 +359,9 @@
         .category-header .cat-count {
             margin-left: auto;
             background: rgba(255, 255, 255, 0.25);
-            padding: 0.2rem 0.6rem;
-            border-radius: 12px;
-            font-size: 0.75rem;
+            padding: 0.15rem 0.5rem;
+            border-radius: 10px;
+            font-size: 0.7rem;
             font-weight: 600;
         }
 
@@ -378,17 +388,17 @@
         .category-body {
             padding: 0.8rem;
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            grid-template-columns: 1fr;
             gap: 0.8rem;
         }
 
         .link-card {
             display: flex;
             align-items: center;
-            gap: 1rem;
-            padding: 1rem 1.2rem;
+            gap: 0.6rem;
+            padding: 0.6rem 0.8rem;
             background: #f8fafc;
-            border-radius: 12px;
+            border-radius: 8px;
             text-decoration: none;
             color: #2d3748;
             transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
@@ -407,21 +417,13 @@
         }
 
         .link-name {
-            font-weight: 600;
-            font-size: 0.9rem;
+            font-weight: 500;
+            font-size: 1.0rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
             color: #2d3748;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-
-        .link-url-text {
-            font-size: 0.75rem;
-            color: #a0aec0;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            margin-top: 0.15rem;
+            line-height: 1.2;
         }
 
         .link-arrow {
@@ -446,6 +448,99 @@
             .category-body {
                 grid-template-columns: 1fr;
             }
+
+            .dashboard-clients-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .dashboard-clients-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .dashboard-state {
+            margin-bottom: 3rem;
+        }
+
+        .dashboard-state-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+
+        .dashboard-state-flag {
+            width: 60px;
+            height: 40px;
+            object-fit: contain;
+            border-radius: 4px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .dashboard-state-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .dashboard-client {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 1.2rem;
+            margin-bottom: 0;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        .dashboard-client-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .dashboard-client-logo {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+            border-radius: 8px;
+            background: white;
+            padding: 0.2rem;
+        }
+
+        .dashboard-client-placeholder {
+            width: 50px;
+            height: 50px;
+            border-radius: 8px;
+            background: linear-gradient(135deg, #e2e8f0, #cbd5e1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.0rem;
+            color: #718096;
+            font-weight: bold;
+        }
+
+        .dashboard-client-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: white;
+        }
+
+        .dashboard-clients-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+        }
+
+        .dashboard-clients-grid .dashboard-client {
+            width: 250px;
         }
     </style>
 </head>
@@ -460,57 +555,27 @@
             <div id="login-erro" class="erro" style="display:none;"></div>
             <form onsubmit="return doLogin(event)">
                 <div class="form-group">
-                    <label for="username">Usuário</label>
-                    <input type="text" id="username" required autofocus>
-                </div>
-                <div class="form-group">
                     <label for="password">Senha</label>
-                    <input type="password" id="password" required>
+                    <input type="password" id="password" required autofocus>
                 </div>
                 <button type="submit" style="width:100%;">Entrar</button>
             </form>
         </div>
     </div>
 
-    <!-- ESTADOS -->
-    <div id="page-estados" class="page">
+    <!-- DASHBOARD -->
+    <div id="page-dashboard" class="page">
         <div class="top-bar">
-            <a href="#" onclick="navigate('estados');return false;" class="logo-link"><img src="static/noxtec-logo-branca.png" alt="NoxTec" style="height:36px;"></a>
-            <div id="topbar-estados"></div>
-        </div>
-        <header>
-            <h1>Selecione o Estado</h1>
-        </header>
-        <div class="container grid-container" id="estados-grid"></div>
-    </div>
-
-    <!-- CLIENTES -->
-    <div id="page-clientes" class="page">
-        <div class="top-bar">
-            <a href="#" onclick="navigate('estados');return false;" class="logo-link"><img src="static/noxtec-logo-branca.png" alt="NoxTec" style="height:36px;"></a>
-            <div id="topbar-clientes"></div>
-        </div>
-        <header>
-            <div class="header-state">
-                <img id="clientes-flag" class="header-flag" style="display:none;">
-                <h1 id="clientes-estado-nome"></h1>
+            <img src="static/noxtec-logo-branca.png" alt="NoxTec" style="height:36px;">
+            <div id="topbar-dashboard">
+                <a href="#" onclick="doLogout();return false;" class="logout-btn"
+                    style="color: rgba(255,255,255,0.8); text-decoration: none; font-weight: 500; padding: 0.4rem 1rem; border: 1px solid rgba(255,255,255,0.3); border-radius: 20px;">Sair</a>
             </div>
-            <a href="#" class="back-link" onclick="navigate('estados');return false;">&larr; Voltar para estados</a>
-        </header>
-        <div class="container grid-container" id="clientes-grid"></div>
-    </div>
-
-    <!-- LINKS -->
-    <div id="page-links" class="page">
-        <div class="top-bar">
-            <a href="#" onclick="navigate('estados');return false;" class="logo-link"><img src="static/noxtec-logo-branca.png" alt="NoxTec" style="height:36px;"></a>
-            <div id="topbar-links"></div>
         </div>
         <header>
-            <h1 id="links-cliente-nome"></h1>
-            <a href="#" class="back-link" id="links-back">&larr; Voltar para clientes</a>
+            <h1>Painel de Portais</h1>
         </header>
-        <div class="container flex-container" id="links-container"></div>
+        <div class="container flex-container" id="dashboard-container"></div>
     </div>
 
     <script>
@@ -527,99 +592,65 @@
 
         var session = { loggedIn: false, username: '' };
         var currentPage = '';
-        var navEstado = '';
-        var navCliente = '';
 
-        function navigate(page, arg1, arg2) {
-            if (page === 'clientes') { navEstado = arg1; }
-            if (page === 'links') { navEstado = arg1; navCliente = arg2; }
-            window.location.hash = page + (arg1 ? '/' + encodeURIComponent(arg1) : '') + (arg2 ? '/' + encodeURIComponent(arg2) : '');
+        function navigate(page) {
+            window.location.hash = page;
         }
 
-        function renderTopbar(containerId) {
-            var html = '<div>';
-            if (currentPage !== 'estados' && currentPage !== 'login') {
-                html += '<a href="#" onclick="navigate(\'estados\');return false;">Estados</a> ';
-            }
-            html += '<a href="#" onclick="doLogout();return false;">Sair</a></div>';
-            document.getElementById(containerId).innerHTML = html;
-        }
-
-        function renderEstados() {
-            renderTopbar('topbar-estados');
-            var grid = document.getElementById('estados-grid');
+        function renderDashboard() {
+            var container = document.getElementById('dashboard-container');
             var html = '';
-            for (var nome in APP_DATA) {
-                var info = APP_DATA[nome];
-                html += '<div class="state-card">';
-                html += '<a href="#" onclick="navigate(\'clientes\',\'' + esc(nome) + '\');return false;" style="text-decoration:none;color:inherit;display:flex;flex-direction:column;align-items:center;gap:1rem;width:100%;">';
-                if (info.flag) {
-                    html += '<img class="state-flag" src="' + esc(info.flag) + '" alt="' + esc(nome) + '">';
-                }
-                html += '<span class="state-name">' + esc(nome) + '</span></a></div>';
-            }
-            grid.innerHTML = html;
-        }
-
-        function renderClientes() {
-            renderTopbar('topbar-clientes');
-            var estado = navEstado;
-            var info = APP_DATA[estado];
-            if (!info) { navigate('estados'); return; }
-            document.getElementById('clientes-estado-nome').textContent = estado;
-            var flagEl = document.getElementById('clientes-flag');
-            if (info.flag) {
-                flagEl.src = info.flag;
-                flagEl.style.display = '';
-            } else {
-                flagEl.style.display = 'none';
-            }
-            var grid = document.getElementById('clientes-grid');
-            var html = '';
-            var clients = info.clients || {};
-            for (var nome in clients) {
-                var cli = clients[nome];
-                html += '<div class="client-card">';
-                html += '<a href="#" onclick="navigate(\'links\',\'' + esc(estado) + '\',\'' + esc(nome) + '\');return false;" style="text-decoration:none;color:inherit;display:flex;flex-direction:column;align-items:center;gap:1rem;width:100%;">';
-                if (cli.logo) {
-                    html += '<img class="client-logo" src="' + esc(cli.logo) + '" alt="' + esc(nome) + '">';
-                } else {
-                    html += '<div class="client-logo-placeholder">' + esc(nome.charAt(0)) + '</div>';
-                }
-                html += '<span class="client-name">' + esc(nome) + '</span></a></div>';
-            }
-            grid.innerHTML = html;
-        }
-
-        function renderLinks() {
-            renderTopbar('topbar-links');
-            var estado = navEstado;
-            var cliente = navCliente;
-            var info = APP_DATA[estado];
-            if (!info || !info.clients || !info.clients[cliente]) { navigate('estados'); return; }
-            document.getElementById('links-cliente-nome').textContent = cliente;
-            document.getElementById('links-back').setAttribute('onclick', "navigate('clientes','" + esc(estado) + "');return false;");
-            var links = info.clients[cliente].links || [];
             var badgeOrder = ['PRD', 'TRE', 'EXT', 'BI', 'INT'];
             var badgeLabels = { 'PRD': 'Produção', 'TRE': 'Treinamento', 'EXT': 'Externo', 'BI': 'Business Intelligence', 'INT': 'Interno' };
             var badgeIcons = { 'PRD': 'static/prd.png', 'TRE': 'static/tre.png', 'EXT': 'static/ext.png', 'BI': 'static/bi.png', 'INT': 'static/int.png' };
-            var container = document.getElementById('links-container');
-            var html = '';
-            for (var b = 0; b < badgeOrder.length; b++) {
-                var badge = badgeOrder[b];
-                var filtered = links.filter(function (l) { return l.badge === badge; });
-                if (filtered.length === 0) continue;
-                html += '<div class="category-section cat-' + badge.toLowerCase() + '">';
-                html += '<div class="category-header"><div class="cat-icon">' + badge + '</div><span>' + badgeLabels[badge] + '</span><span class="cat-count">' + filtered.length + '</span></div>';
-                html += '<div class="category-body">';
-                for (var i = 0; i < links.length; i++) {
-                    var link = links[i];
-                    if (link.badge !== badge) continue;
-                    html += '<a href="' + esc(link.url) + '" target="_blank" class="link-card">';
-                    html += '<div class="link-info"><div class="link-name">' + esc(link.name) + '</div><div class="link-url-text">' + esc(link.url) + '</div></div>';
-                    html += '<span class="link-arrow">&#8250;</span></a>';
+
+            for (var estado in APP_DATA) {
+                var info = APP_DATA[estado];
+                html += '<div class="dashboard-state">';
+                html += '<div class="dashboard-state-header">';
+                if (info.flag) {
+                    html += '<img class="dashboard-state-flag" src="' + esc(info.flag) + '" alt="' + esc(estado) + '">';
                 }
-                html += '</div></div>';
+                html += '<div class="dashboard-state-title">' + esc(estado) + '</div>';
+                html += '</div>'; // close header
+
+                var clients = info.clients || {};
+                html += '<div class="dashboard-clients-grid">';
+                for (var cliente in clients) {
+                    var cli = clients[cliente];
+                    html += '<div class="dashboard-client">';
+                    html += '<div class="dashboard-client-header">';
+                    if (cli.logo) {
+                        html += '<img class="dashboard-client-logo" src="' + esc(cli.logo) + '" alt="' + esc(cliente) + '">';
+                    } else {
+                        html += '<div class="dashboard-client-placeholder">' + esc(cliente.charAt(0)) + '</div>';
+                    }
+                    html += '<div class="dashboard-client-title">' + esc(cliente) + '</div>';
+                    html += '</div>'; // close client header
+
+                    var links = cli.links || [];
+                    html += '<div class="flex-container" style="gap:0.8rem;">';
+                    for (var b = 0; b < badgeOrder.length; b++) {
+                        var badge = badgeOrder[b];
+                        var filtered = links.filter(function (l) { return l.badge === badge; });
+                        if (filtered.length === 0) continue;
+                        html += '<div class="category-section cat-' + badge.toLowerCase() + '">';
+                        html += '<div class="category-header"><div class="cat-icon">' + badge + '</div><span>' + badgeLabels[badge] + '</span><span class="cat-count">' + filtered.length + '</span></div>';
+                        html += '<div class="category-body">';
+                        for (var i = 0; i < links.length; i++) {
+                            var link = links[i];
+                            if (link.badge !== badge) continue;
+                            html += '<a href="' + esc(link.url) + '" target="_blank" class="link-card">';
+                            html += '<div class="link-info"><div class="link-name">' + esc(link.name) + '</div></div>';
+                            html += '<span class="link-arrow">&#8250;</span></a>';
+                        }
+                        html += '</div></div>'; // close category-body and category-section
+                    }
+                    html += '</div>'; // close flex-container
+                    html += '</div>'; // close dashboard-client
+                }
+                html += '</div>'; // close dashboard-clients-grid
+                html += '</div>'; // close dashboard-state
             }
             container.innerHTML = html;
         }
@@ -639,25 +670,26 @@
 
         function doLogin(e) {
             e.preventDefault();
-            var u = document.getElementById('username').value.trim();
             var p = document.getElementById('password').value.trim();
-            var user = USERS[u];
-            if (!user) {
+
+            var valid = false;
+            for (var k in USERS) {
+                var pw = typeof USERS[k] === 'string' ? USERS[k] : USERS[k].password;
+                if (pw === p) {
+                    valid = true;
+                    break;
+                }
+            }
+
+            if (!valid) {
                 var el = document.getElementById('login-erro');
-                el.textContent = 'Usuário ou senha inválidos';
+                el.textContent = 'Senha inválida';
                 el.style.display = '';
                 return false;
             }
-            var pw = typeof user === 'string' ? user : user.password;
-            if (pw !== p) {
-                var el2 = document.getElementById('login-erro');
-                el2.textContent = 'Usuário ou senha inválidos';
-                el2.style.display = '';
-                return false;
-            }
             session.loggedIn = true;
-            session.username = u;
-            navigate('estados');
+            session.username = 'comum';
+            navigate('dashboard');
             return false;
         }
 
@@ -666,27 +698,15 @@
             navigate('login');
         }
 
-        function renderCurrentPage() {
-            if (currentPage === 'estados') renderEstados();
-            else if (currentPage === 'clientes') renderClientes();
-            else if (currentPage === 'links') renderLinks();
-        }
-
         function handleHash() {
             var hash = window.location.hash.replace('#', '');
             if (!hash || hash === 'login') {
                 if (!session.loggedIn) { showPage('login'); return; }
-                navigate('estados');
+                navigate('dashboard');
                 return;
             }
             if (!session.loggedIn) { showPage('login'); return; }
-            var parts = hash.split('/');
-            var page = parts[0];
-            var arg1 = parts[1] ? decodeURIComponent(parts[1]) : '';
-            var arg2 = parts[2] ? decodeURIComponent(parts[2]) : '';
-            if (page === 'estados') { showPage('estados'); renderEstados(); }
-            else if (page === 'clientes') { navEstado = arg1; showPage('clientes'); renderClientes(); }
-            else if (page === 'links') { navEstado = arg1; navCliente = arg2; showPage('links'); renderLinks(); }
+            if (hash === 'dashboard') { showPage('dashboard'); renderDashboard(); }
             else { showPage('login'); }
         }
 
